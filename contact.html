@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liên hệ – Đại học Công nghiệp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .topbar{font-size:.925rem;background:#f8f9fa}
+    .banner{height:220px;position:relative;color:#fff;
+      background:url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
+    .banner::before{content:"";position:absolute;inset:0;background:rgba(13,110,253,.55)}
+    .banner .content{position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center}
+    .section-title{border-left:4px solid #0d6efd;padding-left:.6rem}
+    .info-card{border:1px solid rgba(0,0,0,.06)}
+    .map-wrap{aspect-ratio:16/9;border:0;width:100%;border-radius:.5rem}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-blur">
+    <div class="container-fluid px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="home.html">
+        <span class="badge rounded-pill" style="background: linear-gradient(135deg, var(--brand), var(--brand-2));">QL</span>
+        <strong>Quản lý môn học</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item"><a class="nav-link" href="home.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Danh sách môn</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+          
+        </ul>
+        <button id="themeToggle" class="btn btn-outline-secondary btn-sm"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner mb-3">
+    <div class="content">
+      <h1 class="fw-bold text-uppercase">Liên hệ</h1>
+      <p class="mb-0">Kết nối với Nhà trường</p>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <nav class="container" style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+    <ol class="breadcrumb mb-4">
+      <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Liên hệ</li>
+    </ol>
+  </nav>
+
+  <!-- Content -->
+  <div class="container pb-5">
+    <div class="row g-4">
+      <!-- Left: Map + Form -->
+      <div class="col-lg-8">
+        <h3 class="section-title mb-3">Bản đồ &amp; liên hệ trực tuyến</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.9511327673413!2d105.39706327584672!3d21.312947177956026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31348d4ebf6c9a5b%3A0xabb9e949be7982d0!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBDw7RuZyBOZ2hp4buHcCBWaeG7h3QgVHLDrA!5e0!3m2!1svi!2s!4v1758432864409!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="card info-card">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="bi bi-envelope-paper me-2 text-primary"></i>Gửi thông tin liên hệ</h5>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Họ và tên</label>
+                  <input type="text" class="form-control" placeholder="Nguyễn Văn A">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="ban@domain.com">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Số điện thoại</label>
+                  <input type="tel" class="form-control" placeholder="09xx xxx xxx">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Chủ đề</label>
+                  <select class="form-select">
+                    <option>Hỏi đáp tuyển sinh</option>
+                    <option>Hỗ trợ sinh viên</option>
+                    <option>Hợp tác doanh nghiệp</option>
+                    <option>Khác…</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Nội dung</label>
+                  <textarea class="form-control" rows="4" placeholder="Nhập nội dung…"></textarea>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <button class="btn btn-primary"><i class="bi bi-send me-1"></i> Gửi</button>
+                <small class="text-secondary">* Nhà trường sẽ phản hồi trong giờ hành chính.</small>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact info -->
+      <div class="col-lg-4">
+        <h5 class="section-title mb-3">Thông tin liên hệ</h5>
+        <div class="card info-card mb-3">
+          <div class="card-body">
+            <div class="d-flex gap-3">
+              <div class="text-primary fs-3"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <div class="fw-semibold">Trụ sở chính</div>
+                <div class="small text-secondary">123 Đường Đại học, Việt Trì, Phú Thọ</div>
+              </div>
+            </div>
+            <hr>
+            <div class="d-flex gap-3">
+              <div class="text-primary fs-3"><i class="bi bi-telephone"></i></div>
+              <div>
+                <div class="fw-semibold">Điện thoại</div>
+                <div class="small text-secondary">(0210) 3 000 000 – (0210) 3 111 111</div>
+              </div>
+            </div>
+            <hr>
+            <div class="d-flex gap-3">
+              <div class="text-primary fs-3"><i class="bi bi-envelope"></i></div>
+              <div>
+                <div class="fw-semibold">Email</div>
+                <div class="small text-secondary">contact@vtui.edu.vn</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card info-card mb-3">
+          <div class="card-body">
+            <div class="fw-semibold mb-2"><i class="bi bi-clock me-1 text-primary"></i>Giờ làm việc</div>
+            <ul class="list-unstyled small mb-0">
+              <li>Thứ 2 – Thứ 6: 07:30 – 11:30, 13:30 – 17:00</li>
+              <li>Thứ 7: 08:00 – 11:30</li>
+              <li>Chủ nhật &amp; ngày lễ: Nghỉ</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card info-card">
+          <div class="card-body">
+            <div class="fw-semibold mb-2"><i class="bi bi-headset me-1 text-primary"></i>Kênh hỗ trợ</div>
+            <ul class="list-unstyled small mb-0">
+              <li><i class="bi bi-chevron-right"></i> Phòng Tuyển sinh: <a href="#">tuyensinh@vtui.edu.vn</a></li>
+              <li><i class="bi bi-chevron-right"></i> Phòng Công tác SV: <a href="#">ctsv@vtui.edu.vn</a></li>
+              <li><i class="bi bi-chevron-right"></i> Hợp tác doanh nghiệp: <a href="#">dn@vtui.edu.vn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Departments quick list -->
+    <div class="row g-3 mt-4">
+      <div class="col-lg-8">
+        <h5 class="section-title mb-3">Đầu mối các đơn vị</h5>
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Đơn vị</th><th>Điện thoại</th><th>Email</th>
+              </tr>
+            </thead>
+            <tbody class="small">
+              <tr><td>Phòng Đào tạo</td><td>(0210) 3 222 222</td><td>daotao@vtui.edu.vn</td></tr>
+              <tr><td>Phòng CTSV</td><td>(0210) 3 333 333</td><td>ctsv@vtui.edu.vn</td></tr>
+              <tr><td>Phòng Hành chính</td><td>(0210) 3 444 444</td><td>hanhchinh@vtui.edu.vn</td></tr>
+              <tr><td>Phòng Tài chính</td><td>(0210) 3 555 555</td><td>taichinh@vtui.edu.vn</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h5 class="section-title mb-3">Câu hỏi thường gặp</h5>
+        <div class="accordion" id="faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">Thủ tục xác nhận nhập học?</button>
+            </h2>
+            <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+              <div class="accordion-body small">Thí sinh tra cứu giấy báo trúng tuyển, nộp lệ phí và hồ sơ theo hướng dẫn của Phòng Tuyển sinh.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">Xin giấy xác nhận sinh viên?</button>
+            </h2>
+            <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body small">Liên hệ Phòng CTSV, mang theo thẻ SV/CCCD để được cấp trong ngày làm việc.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-top py-4">
+    <div class="container small text-secondary">
+      <div class="row g-3">
+        <div class="col-md">
+          <div class="fw-semibold text-dark">Trường Đại học Công nghiệp – Mẫu</div>
+          <div>Địa chỉ: 123 Đường Đại học, Việt Trì</div>
+          <div>Điện thoại: (0210) 3 000 000</div>
+          <div>Email: info@vtui.edu.vn</div>
+        </div>
+        <div class="col-md">
+          <div class="fw-semibold text-dark mb-2">Liên kết nhanh</div>
+          <ul class="list-unstyled">
+            <li><a class="text-decoration-none" href="#">Tuyển sinh</a></li>
+            <li><a class="text-decoration-none" href="#">Đào tạo</a></li>
+            <li><a class="text-decoration-none" href="#">Tra cứu văn bản</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-3">© 2025 Viet Tri University of Industry (demo). All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', ()=>{
+      const html = document.documentElement;
+      const isLight = html.getAttribute('data-bs-theme') !== 'dark';
+      html.setAttribute('data-bs-theme', isLight ? 'dark' : 'light');
+      document.getElementById('themeToggle').innerHTML = 
+        isLight ? '<i class="bi bi-brightness-high"></i>' : '<i class="bi bi-moon-stars"></i>';
+    });
+  </script>
+</body>
+</html>
